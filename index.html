@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="TopperKit is a study companion for Tamil Nadu State Board students in Class 6 to 12: class books, exercises and study resources in one app.">
+<meta property="og:title" content="TopperKit">
+<meta property="og:description" content="Everything a topper needs. In one app. Class 6 to 12, Tamil Nadu State Board.">
+<title>TopperKit | Study smart. Score high.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#FFFFFF; --bg-soft:#F1F1FD; --ink:#1B1A4A; --ink-soft:#4A4A68;
+  --indigo:#26237A; --indigo-deep:#1C1A5E; --amber:#FFB800; --line:#E2E2F0;
+  --on-indigo:#FFFFFF; --card:#FFFFFF;
+  --display:'Baloo 2','Trebuchet MS',sans-serif; --body:'Nunito','Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12113A; --bg-soft:#191850; --ink:#F1F1FA; --ink-soft:#B9B9D8; --line:#2E2C78; --card:#1C1B58; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12113A; --bg-soft:#191850; --ink:#F1F1FA; --ink-soft:#B9B9D8; --line:#2E2C78; --card:#1C1B58; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:20px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+header.top{position:sticky;top:0;z-index:5;background:var(--indigo-deep);color:var(--on-indigo)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:38px;height:38px;border-radius:10px;flex:none}
+.word{font-family:var(--display);font-weight:800;font-size:26px;line-height:1;display:flex;align-items:center;gap:2px}
+.word i{font-style:normal;background:var(--amber);color:var(--indigo);border-radius:8px;padding:0 7px}
+nav{display:flex;gap:22px;font-weight:700;font-size:15px}
+nav a{text-decoration:none;opacity:.9}
+nav a:hover{opacity:1;text-decoration:underline;text-decoration-color:var(--amber);text-underline-offset:6px}
+@media(max-width:560px){nav{display:none}}
+.hero{background:var(--indigo);color:var(--on-indigo);padding-block:64px 72px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.eyebrow{font-weight:800;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+.hero h1{font-size:clamp(40px,6.4vw,68px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero p.lead{font-size:19px;max-width:34ch;margin-top:18px;color:#E4E4F7}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none}
+.btn.main{background:var(--amber);color:var(--indigo)}
+.btn.main:hover{filter:brightness(1.06)}
+.btn.ghost{border:2px solid rgba(255,255,255,.55);color:#fff}
+.btn.ghost:hover{border-color:#fff}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.pill{border:2px solid rgba(255,255,255,.45);color:#fff;border-radius:999px;padding:7px 18px;font-weight:800;font-size:15px}
+.pill.a{background:var(--amber);border-color:var(--amber);color:var(--indigo)}
+.soon{display:inline-block;background:var(--amber);color:var(--indigo);font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:6px 18px;margin-bottom:16px}
+.hero-art{display:flex;justify-content:center}
+.hero-art svg{width:min(100%,330px);height:auto;border-radius:22%;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero-art{order:-1}.hero-art svg{width:150px}.hero{padding-block:40px 56px}}
+section{padding-block:72px}
+section.soft{background:var(--bg-soft)}
+.head{max-width:60ch;margin-bottom:36px}
+.head h2{font-size:clamp(30px,4.5vw,44px);font-weight:800;color:var(--indigo)}
+:root[data-theme="dark"] .head h2{color:#fff}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .head h2{color:#fff}}
+.head p{margin-top:12px;color:var(--ink-soft)}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.f svg{width:44px;height:44px;margin-bottom:14px}
+.f h3{font-size:24px;font-weight:700}
+.f p{margin-top:8px;color:var(--ink-soft);font-size:16px}
+@media(max-width:820px){.feat{grid-template-columns:1fr}}
+.classes{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 8px;text-align:center}
+.c b{display:block;font-family:var(--display);font-size:36px;line-height:1;color:var(--indigo)}
+.c span{display:block;margin-bottom:6px;font-size:13px;font-weight:700;color:var(--ink-soft);letter-spacing:.06em;text-transform:uppercase}
+.c.star{background:var(--amber);border-color:var(--amber);display:grid;place-items:center;padding:0}
+:root[data-theme="dark"] .c b{color:#fff}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .c b{color:#fff}}
+@media(max-width:820px){.classes{grid-template-columns:repeat(4,1fr)}.c.star{min-height:84px}}
+.note{margin-top:20px;color:var(--ink-soft);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.s{display:flex;gap:16px;align-items:flex-start}
+.s .n{flex:none;width:44px;height:44px;border-radius:50%;background:var(--amber);color:var(--indigo);font-family:var(--display);font-weight:800;font-size:22px;display:grid;place-items:center}
+.s h3{font-size:22px;font-weight:700}
+.s p{color:var(--ink-soft);font-size:16px;margin-top:4px}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.parents{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.parents ul{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.parents li{display:flex;gap:12px;align-items:flex-start}
+.parents li svg{flex:none;width:24px;height:24px;margin-top:3px}
+@media(max-width:820px){.parents{grid-template-columns:1fr}}
+details{border-top:1px solid var(--line);padding-block:16px}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:800;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:26px;line-height:1;color:var(--indigo)}
+details[open] summary::after{content:"–"}
+:root[data-theme="dark"] summary::after{color:var(--amber)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) summary::after{color:var(--amber)}}
+details p{margin-top:10px;color:var(--ink-soft);max-width:70ch}
+.final{background:var(--indigo);color:#fff;text-align:center}
+.final h2{font-size:clamp(32px,5vw,50px);font-weight:800}
+.final h2 em{font-style:normal;color:var(--amber)}
+.final p{margin:14px auto 0;max-width:46ch;color:#E4E4F7}
+.final .cta{justify-content:center}
+footer{background:var(--indigo-deep);color:#C9C9EE;padding-block:40px;font-size:14px}
+footer .wrap{display:grid;gap:18px}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+footer .links{display:flex;flex-wrap:wrap;gap:18px;font-weight:700}
+footer .links a{text-decoration:none;color:#fff}
+footer .links a:hover{text-decoration:underline;text-decoration-color:var(--amber)}
+.disc{max-width:80ch;line-height:1.55}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="0 0 512 512">
+      <rect width="512" height="512" fill="#26237A"/>
+      <rect x="98" y="152" width="278" height="67" rx="33.5" fill="#FFFFFF"/>
+      <rect x="200" y="206" width="76" height="170" fill="#FFFFFF"/>
+      <polygon points="200,376 276,376 237,443" fill="#FFB800"/>
+      <polygon points="222,418 252,418 237,443" fill="#2E2B93"/>
+      <path d="M378 75 Q378 107 410 107 Q378 107 378 139 Q378 107 346 107 Q378 107 378 75 Z" fill="#FFB800"/>
+    </symbol>
+  </defs>
+</svg>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="TopperKit home">
+      <svg viewBox="0 0 512 512" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="word">Topper<i>Kit</i></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#inside">What's inside</a>
+      <a href="#classes">Classes</a>
+      <a href="#parents">For parents</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Class 6 to 12 · Tamil Nadu State Board</p>
+        <h1>Everything a <em>topper</em> needs. In one app.</h1>
+        <p class="lead">Class books, exercises and study resources in one app.</p>
+        <div class="cta">
+          <a class="btn main" href="#get">Get the app</a>
+          <a class="btn ghost" href="#how">How it works</a>
+        </div>
+        <div class="pills"><span class="pill a">Class 6 to 12</span><span class="pill">Made for Tamil Nadu students</span></div>
+      </div>
+      <div class="hero-art"><svg viewBox="0 0 512 512" role="img" aria-label="TopperKit logo"><use href="#mark"/></svg></div>
+    </div>
+  </section>
+  <section id="inside">
+    <div class="wrap">
+      <div class="head">
+        <h2>What's inside</h2>
+        <p>One place for the things a student opens every day.</p>
+      </div>
+      <div class="feat">
+        <div class="f">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#26237A" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M6 10c6-2 12-1 18 3v26c-6-4-12-5-18-3z"/><path d="M42 10c-6-2-12-1-18 3v26c6-4 12-5 18-3z"/><path d="M33 4l1.6 3.4L38 9l-3.4 1.6L33 14l-1.6-3.4L28 9l3.4-1.6z" fill="#FFB800" stroke="#FFB800"/></svg>
+          <h3>Class books</h3>
+          <p>Your textbooks, always with you.</p>
+        </div>
+        <div class="f">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#26237A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="5"/><path d="M15 17l3 3 6-6"/><path d="M15 30h18"/><path d="M15 36h10"/></svg>
+          <h3>Exercises</h3>
+          <p>Practise every chapter, any time.</p>
+        </div>
+        <div class="f">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#26237A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M24 15v10M24 31v1"/></svg>
+          <h3>Study resources</h3>
+          <p>Helpful material for every lesson.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="classes" class="soft">
+    <div class="wrap">
+      <div class="head">
+        <h2>Built for every class from 6 to 12</h2>
+        <p>Pick your class and start with the subjects you study this year.</p>
+      </div>
+      <div class="classes" role="list">
+        <div class="c" role="listitem"><span>Std</span><b>6</b></div>
+        <div class="c" role="listitem"><span>Std</span><b>7</b></div>
+        <div class="c" role="listitem"><span>Std</span><b>8</b></div>
+        <div class="c" role="listitem"><span>Std</span><b>9</b></div>
+        <div class="c" role="listitem"><span>Std</span><b>10</b></div>
+        <div class="c" role="listitem"><span>Std</span><b>11</b></div>
+        <div class="c" role="listitem"><span>Std</span><b>12</b></div>
+        <div class="c star" aria-hidden="true"><svg viewBox="0 0 48 48" width="44" height="44"><path d="M24 4 Q24 24 44 24 Q24 24 24 44 Q24 24 4 24 Q24 24 24 4 Z" fill="#26237A"/></svg></div>
+      </div>
+      <p class="note">Content is being added class by class. The app is not yet available to download.</p>
+    </div>
+  </section>
+  <section id="how">
+    <div class="wrap">
+      <div class="head"><h2>How it works</h2></div>
+      <div class="steps">
+        <div class="s"><div class="n">1</div><div><h3>Choose your class</h3><p>Select Class 6 to 12 once.</p></div></div>
+        <div class="s"><div class="n">2</div><div><h3>Pick a subject</h3><p>Open the book and chapter you are studying.</p></div></div>
+        <div class="s"><div class="n">3</div><div><h3>Start studying</h3><p>Read, practise the exercises and revise.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <section id="parents" class="soft">
+    <div class="wrap parents">
+      <div class="head" style="margin:0">
+        <h2>For parents</h2>
+        <p>TopperKit is made for school students, so we keep the experience focused on studying.</p>
+      </div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#26237A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#FFB800" stroke="#FFB800"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><span><b>Matches the school syllabus.</b> Organised around the Tamil Nadu State Board books your child already uses.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#26237A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#FFB800" stroke="#FFB800"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><span><b>Study first.</b> Simple screens designed to help a student sit down, study and finish.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#26237A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#FFB800" stroke="#FFB800"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><span><b>Clear privacy terms.</b> Our Privacy Policy will explain what we collect and why before the app launches.</span></li>
+      </ul>
+    </div>
+  </section>
+  <section id="faq">
+    <div class="wrap" style="max-width:820px">
+      <div class="head"><h2>Questions</h2></div>
+      <details>
+        <summary>Is TopperKit an official government app?</summary>
+        <p>No. TopperKit is an independent study companion built for the Tamil Nadu State Board syllabus. It is not affiliated with or endorsed by the Government of Tamil Nadu.</p>
+      </details>
+      <details>
+        <summary>Which classes does it cover?</summary>
+        <p>Class 6 to Class 12. Content is being added class by class.</p>
+      </details>
+      <details>
+        <summary>When can I download it?</summary>
+        <p>The app is in preparation. Launch details will be posted here on topperkit.com.</p>
+      </details>
+      <details>
+        <summary>Which language is the content in?</summary>
+        <p>The language options will be confirmed at launch.</p>
+      </details>
+      <details>
+        <summary>Who is behind TopperKit?</summary>
+        <p>TopperKit is built by TopperKit Edutech Private Limited, a company based in India.</p>
+      </details>
+    </div>
+  </section>
+  <section id="get" class="final">
+    <div class="wrap">
+      <span class="soon">Coming soon</span>
+      <h2>Introducing <em>TopperKit</em></h2>
+      <p>Your study companion for Class 6 to 12 students in Tamil Nadu. Study smart. Score high.</p>
+      <div class="cta"><a class="btn main" href="#top">Back to top</a></div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="#top" aria-label="TopperKit home">
+        <svg viewBox="0 0 512 512" style="width:34px;height:34px;border-radius:9px" aria-hidden="true"><use href="#mark"/></svg>
+        <span class="word" style="font-size:22px;color:#fff">Topper<i>Kit</i></span>
+      </a>
+      <div class="links">
+        <a href="#inside">What's inside</a><a href="#classes">Classes</a><a href="#parents">For parents</a><a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <p class="disc">TopperKit is an independent study companion. It is not affiliated with or endorsed by the Government of Tamil Nadu or the Tamil Nadu Textbook and Educational Services Corporation. Content is provided for learning support.</p>
+    <p>© 2026 TopperKit Edutech Private Limited. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
